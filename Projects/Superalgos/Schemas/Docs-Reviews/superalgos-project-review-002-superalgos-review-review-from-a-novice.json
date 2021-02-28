@@ -1,0 +1,20 @@
+{
+    "review": "Superalgos Project Review",
+    "pageNumber": 2,
+    "type": "Superalgos Review - Review from a novice",
+    "definition": {
+        "text": "This is my initial review of Superalgos from a complete novice in automated trading",
+        "updated": 1614481511836
+    },
+    "paragraphs": [
+        {
+            "style": "Text",
+            "text": "I have some experience with crypto, and some experience with IoT, arduino, hardware implementation. I came across this program on github while looking for some code for my raspberry pi. I immediatetly was intriguied. I went to the site and read all about it. I will admit I was hesitant at first, being pretty new to open source programming and the whole crypto world. So i attempted an install on my pi at first, and quickyl realized the limitations of the pi while trying to run the tutorial througha vnc server to my mac... didnt work. So I continued to install it on my macbook at this point. Initailly I tried to setup the remote network off the pi but the initial tutorial was overhwleming enough. I stuck with running it on the macbook. After working through the getting started tutorial a few times and getting an undertsanding of what was going on, I set up my binance.us acct, and went through that whole process until I was verified. I was ready to run my first live session. I had multiple errors, and tried to troubleshoot but ultimately ended up in the support group. I was blown away at how fast Julian and other memebers were to respond to my issues. I was up and running shortly after. I let the first trading session run overnight while I watched on binance to develop a better understanding of the process in realtime. I was hooked. What an awesome tool. My life doesnt allow me to spend as much time as I'd like trading and investing, Im hoping Superalgos will help change that. I can see the immense value and power in this tool and cant wait to continue working through the tutorials and really get to trading! You have to try it for yourself!",
+            "updated": 1614482155567
+        },
+        {
+            "style": "Text",
+            "text": "github.com: ndd91"
+        }
+    ]
+}
