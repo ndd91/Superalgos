@@ -1,8 +1,8 @@
-# Superalgos Beta 9 - Getting Started Guide
+# Superalgos Beta 10 - Getting Started Guide
 
 All procedures are the same for Windows, Linux, or Mac OS. Raspberry Pi terminal commands have been included for ease of use.
 
-> **IMPORTANT:** Minimalist hardware —both virtual and physical— is better suited for production deployments, where the use of the GUI is minimal. We highly recommend learning Superalgos in a local installation. Mastering the system takes time, and the use of the GIU to go through in-app tutorials is crucial during the learning process. Your experience will be orders of magnitude better if you follow this advice: leave minimalist hardware for when you are ready to start trading live.
+> **IMPORTANT:** Minimalist hardware —both virtual and physical— is better suited for production deployments, where the use of the GUI is minimal. We highly recommend learning Superalgos in a local installation. Mastering the system takes time, and the use of the GUI to go through in-app tutorials is crucial during the learning process. Your experience will be orders of magnitude better if you follow this advice: leave minimalist hardware for when you are ready to start trading live.
 
 ![superalgos-readme](https://user-images.githubusercontent.com/13994516/106380124-844d8980-63b0-11eb-9bd9-4f977b6c183b.gif)
 
@@ -107,30 +107,15 @@ This creates the `Superalgos` folder in the current directory, which contains th
 
 **C.** Before installing the client on a remote computer in an attempt to access the UI from a different machine, we highly recommend you do a standard installation on your PC / laptop first. Leave your Raspberry Pi or VPS for later, once you have done all available tutorials. This single tip will save you a lot of time: you don't need to add complexity before you learn how to handle the app, and the GUI performs best in a local installation.
 
-## 4. Migrating from Superalgos Beta 8
+## 4. Migrating from Superalgos Beta 9
 
 ### Refactorings 
 
-In order to migrate your own workspaces to Beta 9, you will need to open My Workspaces folder with an IDE like VS Code and do some refactorings. This is what you need to find and replace:
+In order to migrate your own workspaces to Beta 10, you will need to open My Workspaces folder with an IDE like VS Code and do some refactorings. This is what you need to find and replace:
 
 | Find | Replace With |
 | :---: | :---: |
-| Current | Trading Current |
-| current | tradingCurrent |
-| Last | Trading Last |
-| last | tradingLast |
-| Episode | Trading Episode |
-| episode | tradingEpisode |
-| Episode Counters | Trading Episode Counters |
-| episodeCounters | tradingEpisodeCounters |
-| Episode Statistics | Trading Episode Statistics |
-| episodeStatistics | tradingEpisodeStatistics |
-| Distance To Event | Distance To Trading Event |
-| distanceToEvent | distanceToTradingEvent |
-
-### Renaming of Exchange Folders
-
-In Beta 9, the `exchange id` is used at the code and folder names instead of the exchange name. To migrate to Beta 9 users running on case sensitive Operating Systems (like Linux) must rename their Data-Storage Exchange folders using the Id of the exchange (in the case of Binance, it's the same name, but with lower-case b: binance). If you are using a different exchange, look at its node configuration and use the value at the property `codeName` to name the folder.
+| There are currently no refactorings to be made. |  |
 
 # Usage
 
@@ -157,7 +142,51 @@ then
 node run minMemo noBrowser
 ```
 
-## 2. Usage Notes
+## 2. Add a Desktop/Launcher Shortcut for Superalgos 
+
+There are a number of scripts available to help make lauching Superalgos easier and feel more native. To use these scripts, follow the steps for your operating system.
+
+## For **Windows** Users
+
+Open a file browser and navigate to the Superalgos Directory.
+
+Under the folder titled `Launch-Scripts` double-click the script `create-shortcut-windows.bat`. 
+
+After running this script there will be two shortcuts added.  One to your start menu and one to your desktop. You can now lauch Superalgos from any of these shortcuts, or search `Superalgos` in the start menu search bar.
+
+## For **Ubuntu** Users
+
+Open a terminal and run the following commands:
+```
+cd Superalgos/Launch-Scripts
+```
+```
+bash create-shortcut-ubuntu.sh
+```
+
+After running these commands there will be two shortcuts added. One to your launcher and one to your desktop. The launcher shortcut will work out of the box. The desktop shortcut, however, requires a few additional steps to set up. The following section will walk you through these steps.
+
+**A.** Enable Desktop Shortcut
+
+First, desktop icons need to be enabled within the Tweaks app.
+* Check if Tweaks is installed.
+* If not go to Ubuntu Software.
+* Install Tweaks.
+* Open Tweaks.
+* Under extensions turn on Desktop Icons
+
+![enable-ubuntu-shortcut](https://user-images.githubusercontent.com/55707292/117553927-f0780300-b019-11eb-9e36-46b509653283.gif)
+
+**TIP:** If you do not see the desktop shortcut appear right away you may need to restart your computer.
+
+Finally, you will need to enable the desktop shortcut.
+* Right click Superalgos.desktop and select Allow Launching.
+
+![allow-launching](https://user-images.githubusercontent.com/55707292/117553933-fcfc5b80-b019-11eb-872c-4fad81b184d2.gif)
+
+Now both shortcuts will launch Superalgos like any other program on your computer.
+
+## 3. Usage Notes
 
 We are testing the UI on Google Chrome and Safari on macOS only. It may work on other browsers as well &mdash; or not. If you are running on a different browser and ever need support, make sure you mention that fact upfront, or even better, try on Chrome/Safari first.
 
@@ -208,6 +237,21 @@ journalctl -u superalgos -f
 
 Superalgos writes nothing outside of the ```Superalgos``` folder. To completely uninstall the software, just delete the folder.
 
+If you have installed shortcuts for Superalgos you can remove them as follows:
+
+## For **Windows** Users
+
+Open a file browser and navigate to the Superalgos directory.
+
+Under the folder titled `Launch-Scripts` double-click the script `uninstall-shortcut-windows.bat`. 
+
+## For **Ubuntu** Users
+
+Open a terminal and run the following command:
+```
+rm ~/Desktop/Superalgos.desktop && rm ~/.local/share/applications/Superalgos.desktop
+```
+
 # Welcome Tutorial
 
 Once the app finishes loading, an interactive tutorial takes you by the hand and walks you all around the system while you learn the basic skills required to use the interface, mine data, backtest strategies, and even run a live trading session. It is highly recommended you follow the tutorial until the end, as it is carefully crafted to make your onboarding as easy as possible. Tutorials are the absolute best way to tackle the learning curve. You should do all tutorials before you start exploring other avenues on your own.
@@ -218,22 +262,36 @@ Once the app finishes loading, an interactive tutorial takes you by the hand and
 
 # Docker Deployments
 
+Docker container images can be found at https://github.com/users/Superalgos/packages/container/package/superalgos
+
 If you wish to run Superalgos over docker platform, follow these steps.
 
 ## 1. Install Docker
 
 Follow the link to [install docker](https://docs.docker.com/engine/install/).
 
-## 2. Login and Run
+## 2. Run
+
+You will need to create local storage directories beforehand, by example with `mkdir Data-Storage Log-Files My-Workspaces`
 
 ```
-docker login ghcr.io --username your-github-username --password-stdin
-```
-```
-docker run -p 18041:18041 -p 34248 superalgos/superalgos
+docker run \
+  -d \
+  --rm \
+  --name superalgos \
+  -p 18041:18041 \
+  -p 34248:34248 \
+  -v $(pwd)/Data-Storage:/app/Data-Storage \
+  -v $(pwd)/Log-Files:/app/Log-Files \
+  -v $(pwd)/My-Workspaces:/app/My-Workspaces \
+  ghcr.io/superalgos/superalgos:latest
 ```
 
-Now you can access to the Superalgos UI.
+Now you can access to the Superalgos UI at http://127.0.0.1:34248
+
+To see console logs you can use `docker logs superalgos -f`
+
+When you're done just exec `docker kill superalgos`
 
 **Note:** This has not been extensively tested yet. If you run into troubles, please contact us at the [Superalgos Support Group](https://t.me/superalgossupport).
 
@@ -317,7 +375,7 @@ No problem, code or integrate libraries with your own version of any component a
 * Superalgos is easy to learn.
 * Superalgos is easy to debug.
 * Superalgos is well documented.
-* You have free online support via Telegram.
+* You have free online support via Telegram and Discord.
 
 ## Superalgos Saves You Money
 
@@ -349,7 +407,9 @@ No problem, code or integrate libraries with your own version of any component a
 
 # Support
 
-The Superalgos Community meets on several Telegram groups.
+We just opened a brand new [Discord server for Support and the Community](https://discord.gg/CGeKC6WQQb).
+
+We also meet on several Telegram groups, where it all started!
 
 > **BEWARE OF IMPERSONATORS — SCAMMERS ARE LURKING!**
 Superalgos Admins, the Core Team, and Community Mods will never contact you directly unless you contact them first. We will never ask you for API keys, coins, or cash. In fact, we will never ask you to trust us in any way. Our [Community Safetey Policy](https://superalgos.org/community-safety-policy.shtml) explains why. In short, we want to make it clear that if someone contacts you directly claiming to work with or for the project, it is a scam. Please report scammers in the Community group so that they may be banned, and to increase awareness of the problem, but also block them and report them to Telegram if the option is available.

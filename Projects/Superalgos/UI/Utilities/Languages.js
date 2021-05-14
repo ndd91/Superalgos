@@ -24,6 +24,14 @@ function newSuperalgosUtilitiesLanguages() {
                 languageLabel = 'Italian'
                 break
             }
+            case 'DE': {
+                languageLabel = 'German'
+                break
+            }
+            case 'FR': {
+                languageLabel = 'French'
+                break
+            }
             case 'CN': {
                 languageLabel = 'Simplified Chinese-Mandarin'
                 break

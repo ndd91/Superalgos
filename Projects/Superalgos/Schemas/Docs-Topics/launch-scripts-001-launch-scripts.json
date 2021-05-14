@@ -1,0 +1,231 @@
+{
+    "topic": "Launch Scripts",
+    "pageNumber": "1",
+    "type": "Launch Scripts",
+    "definition": {
+        "text": "There are a number of scripts to help make lauching Superalgos easier and feel more native. The eventual goal is to make Superalgos feel like any other program installed on an operating system.",
+        "updated": 1620052836275
+    },
+    "paragraphs": [
+        {
+            "style": "Text",
+            "text": "The current solution is to use two sets of scripts:",
+            "updated": 1620051940824
+        },
+        {
+            "style": "List",
+            "text": "One set to execute node run and actually start Superalgos.",
+            "updated": 1620051973593
+        },
+        {
+            "style": "List",
+            "text": "The second to create and place shortcuts to these launch scripts for convenient use.",
+            "updated": 1620052849823
+        },
+        {
+            "style": "Text",
+            "text": "Due to the nature of scripts, there are different scripts for each type of operating system. The following page includes a description of each script and what it accomplishes.",
+            "updated": 1620052862888
+        },
+        {
+            "style": "Note",
+            "text": "All launch related scripts are held in the Lauch-Scripts folder in the main Superalgos directory.",
+            "updated": 1620504577923
+        },
+        {
+            "style": "Text",
+            "text": ""
+        },
+        {
+            "style": "Title",
+            "text": "Basic Launch Scripts"
+        },
+        {
+            "style": "Text",
+            "text": "These scripts execute the node run command to start Superalgos. They can be run from command line calls or a file browser.",
+            "updated": 1620052707525
+        },
+        {
+            "style": "Subtitle",
+            "text": "Windows "
+        },
+        {
+            "style": "Json",
+            "text": "launch-windows.bat"
+        },
+        {
+            "style": "Subtitle",
+            "text": "Linux"
+        },
+        {
+            "style": "Json",
+            "text": "launch-linux.sh"
+        },
+        {
+            "style": "Text",
+            "text": "This script uses the x-terminal-emulator command for maximum compatiblity across linux flavors."
+        },
+        {
+            "style": "Subtitle",
+            "text": "Mac"
+        },
+        {
+            "style": "Important",
+            "text": "Collaborator needed.",
+            "updated": 1620052924921
+        },
+        {
+            "style": "Subtitle",
+            "text": ""
+        },
+        {
+            "style": "Title",
+            "text": "Desktop/Launcher Shortcut Scripts",
+            "updated": 1620052680945
+        },
+        {
+            "style": "Text",
+            "text": "These scripts automatically create and place shortcuts to the launch scripts. They can be run from the command line or file browser.",
+            "updated": 1620504518909
+        },
+        {
+            "style": "Subtitle",
+            "text": "Windows"
+        },
+        {
+            "style": "Json",
+            "text": "create-shortcut-windows.bat",
+            "updated": 1620053219653
+        },
+        {
+            "style": "Text",
+            "text": "This script places shortcuts within the user's start menu and desktop. The start menu shortcut is also searchable using the start menu search bar.",
+            "updated": 1620789169171
+        },
+        {
+            "style": "Subtitle",
+            "text": "Ubuntu",
+            "updated": 1620053330166
+        },
+        {
+            "style": "Json",
+            "text": "create-shortcut-ubuntu.sh",
+            "updated": 1620504490683
+        },
+        {
+            "style": "Text",
+            "text": "This script places shortcuts within the user's launcher and desktop. Shortcuts are placed in the following locations:",
+            "updated": 1620504828523
+        },
+        {
+            "style": "List",
+            "text": "~/Desktop/Superalgos.desktop"
+        },
+        {
+            "style": "List",
+            "text": "~/.local/share/applications/Superalgos.desktop"
+        },
+        {
+            "style": "Note",
+            "text": "After running create-shortcut-ubuntu.sh the launcher shortcut will work out of the box. There are a few additional steps to set up the desktop shortcut. The following section will walk you through these steps.",
+            "updated": 1620505700097
+        },
+        {
+            "style": "Text",
+            "text": "First, desktop icons need to be enabled within the Tweaks app.",
+            "updated": 1620505123531
+        },
+        {
+            "style": "List",
+            "text": "Check if Tweaks is installed.",
+            "updated": 1620505145330
+        },
+        {
+            "style": "List",
+            "text": "If not go to Ubuntu Software.",
+            "updated": 1620505149642
+        },
+        {
+            "style": "List",
+            "text": "Install Tweaks.",
+            "updated": 1620505153965
+        },
+        {
+            "style": "List",
+            "text": "Open Tweaks.",
+            "updated": 1620505158082
+        },
+        {
+            "style": "List",
+            "text": "Under extensions turn on Desktop Icons"
+        },
+        {
+            "style": "Gif",
+            "text": " GIFs/Superalgos/Docs/launch-scripts/enable-ubuntu-shortcut.gif"
+        },
+        {
+            "style": "Success",
+            "text": "If you do not see the desktop shortcut appear right away you may need to restart your computer.",
+            "updated": 1620505754854
+        },
+        {
+            "style": "Text",
+            "text": "Finally, you will need to enable the desktop shortcut.",
+            "updated": 1620505790748
+        },
+        {
+            "style": "List",
+            "text": "Right click Superalgos.desktop and select Allow Launching.",
+            "updated": 1620505813768
+        },
+        {
+            "style": "Gif",
+            "text": "GIFs/Superalgos/Docs/launch-scripts/allow-launching.gif",
+            "updated": 1620505894840
+        },
+        {
+            "style": "Subtitle",
+            "text": "Mac"
+        },
+        {
+            "style": "Important",
+            "text": "Collaborator needed."
+        },
+        {
+            "style": "Title",
+            "text": "Uninstall Shortcuts",
+            "updated": 1620789208012
+        },
+        {
+            "style": "Subtitle",
+            "text": "Windows",
+            "updated": 1620789368194
+        },
+        {
+            "style": "Text",
+            "text": "Open a file browser and navigate to the Superalgos directory."
+        },
+        {
+            "style": "Text",
+            "text": "Under the folder titled Launch-Scripts double-click the script:",
+            "updated": 1620789459938
+        },
+        {
+            "style": "Json",
+            "text": "uninstall-shortcut-windows.bat",
+            "updated": 1620789508304
+        },
+        {
+            "style": "Subtitle",
+            "text": "Ubuntu"
+        },
+        {
+            "style": "Text",
+            "text": "Open a terminal and run the following command:"
+        },
+        {
+            "style": "Javascript",
+            "text": "rm ~/Desktop/Superalgos.desktop && rm ~/.local/share/applications/Superalgos.desktop"
+        }
+    ]
+}
