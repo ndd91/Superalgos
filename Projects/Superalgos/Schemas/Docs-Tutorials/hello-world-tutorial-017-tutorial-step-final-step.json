@@ -13,8 +13,8 @@
     "paragraphs": [
         {
             "style": "Text",
-            "text": "When backtest finishes I stop the whole hierarchy form the Testing Trading Tasks node. Expand the node and click on Stop All.",
-            "updated": 1614268732305
+            "text": "When the backtest finishes I stop the whole hierarchy form the Testing Trading Tasks node. Expand the node and click on Stop All.",
+            "updated": 1619307869172
         },
         {
             "style": "Success",
